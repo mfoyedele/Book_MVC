@@ -1,6 +1,12 @@
-﻿namespace BookStore.Data
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace BookStore.Data
 {
-    public class ApplicationDbContext
+    public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+            
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace BookStore.Data
         {
             
         }
+        public int MyProperty { get; set; }
     }
 }

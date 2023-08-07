@@ -4,7 +4,8 @@ namespace BookStore.Models
 {
     public class Category
     {
-        public int Category21Id { get; set; }
+        [Key]
+        public int Id { get; set; }
         [Required]
         public int Name { get; set; }
         public int DisplayOrder { get; set;}

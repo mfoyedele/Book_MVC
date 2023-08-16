@@ -42,7 +42,12 @@ namespace BookStore.Controllers
             {
                 return NotFound();
             }
-            return View();
+            Category categoryFromDb = _db.Categories.Find(id);
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
         }
         [HttpPost]
         public IActionResult Edit(Category obj)

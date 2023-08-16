@@ -38,14 +38,14 @@ namespace BookStore.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if (id == null || == 0) 
+            if (id == null || id == 0) 
             {
                 return NotFound();
             }
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Category obj)
+        public IActionResult Edit(Category obj)
         {
             if (obj.Name == obj.DisplayOrder.ToString())
             {

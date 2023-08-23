@@ -81,7 +81,8 @@ namespace BookStore.Controllers
             return View(categoryFromDb);
         }
         [HttpPost]
-        public IActionResult Delete(Category obj)
+        public IActionResult DeletePOST(int? id)
+
         {
             if (ModelState.IsValid)
             {

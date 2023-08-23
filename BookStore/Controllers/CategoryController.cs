@@ -89,14 +89,8 @@ namespace BookStore.Controllers
                 return NotFound();
             }
             _db.Categories.Remove(obj);
-
-            if (ModelState.IsValid)
-            {
-                _db.Categories.Update(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View();
+            _db.SaveChanges();
+            return RedirectToAction("Index");            
         }
     }
 }
